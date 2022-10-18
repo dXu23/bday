@@ -1,0 +1,170 @@
+
+@font-face {
+  font-family: 'Congrats';
+  src: url('congrats-script.regular.otf');
+}
+
+@font-face {
+  font-family: 'Happy Monkey';
+  src: url('HappyMonkey-Regular.ttf');
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Happy Monkey', cursive;
+  background: linear-gradient(lightblue, #71dcc9);
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: white;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header h4 {
+  margin: 20px 0px 16px 0px;
+  background-color: #ffb3de;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+h1 {
+  color: lightgoldenrodyellow;
+  font-family: 'Congrats', cursive;
+  font-size: 48px;
+  text-shadow: 0px 0px 5px gray;
+}
+
+h2, h3, h4, p {
+  text-shadow: 0px 0px 1px black;
+}
+
+.gift-section {
+  margin-block: 50px;
+}
+
+.gift-section h1 {
+  margin-bottom: 10px;
+}
+
+.gift-section h2 {
+  margin-top: 0;
+}
+
+#bday-person {
+  width: 25%;
+  border-radius: 50%;
+  border: 6px solid #ffb3de;
+}
+
+#cheers {
+  height: 200px;
+}
+
+.gift-anim {
+  transition: all 0.750s ease-in-out 0.4s;
+}
+
+.gift-image {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  border: 6px solid white;
+  border-radius: 10px;
+  width: 400px;
+  height: 400px;
+  backface-visibility: hidden;
+}
+
+.gift-image .wrapping {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400px;
+  aspect-ratio: 1 / 1;
+}
+
+.gift-image .reveal {
+  object-fit: cover;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+.gift-image .wrapping {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.gift-image .front {
+  width: 100%;
+  height: 100%;
+  background-color: #ffb3de;
+  background-image: radial-gradient(#ff0 18%, transparent 20%),
+    radial-gradient(#ff0 18%, transparent 20%);
+  background-size: 100px 100px;
+  background-position: 0 0, 50px 50px;
+  background-repeat: repeat;
+  position: absolute;
+  border-radius: 10px;
+  /* transition: all 0.7s ease-in-out; */
+}
+
+.gift-image:hover .front {
+  width: 0;
+}
+
+.decorative-bow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 45%;
+  aspect-ratio: 1 / 1;
+  transform: translate(-50%, -50%);
+  transition: transform 0.4s ease-in-out 0.8s;
+}
+
+.gift-image:hover .decorative-bow {
+  transform: translate(-65vw, -50%) rotate(360deg);
+
+  transition: transform 0.3s ease-in-out;
+}
+
+.gift-image .back {
+  position: absolute;
+  background: radial-gradient(#FFFFFF, #dcdcdc);
+  border-radius: 10px;
+  height: 100%;
+  width: 0%;
+  right: 0%;
+  background-color: white;
+}
+
+.gift-image:hover .back {
+  width: 100%;
+  right: 100%;
+}
+
+footer {
+  font-style: italic;
+  margin: 3em 0 1.5em 0;
+}
+
+a {
+  color: white;
+}
+
+
